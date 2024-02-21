@@ -1,0 +1,303 @@
+@import "vars";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: calc(50% - $widthContent/2);
+    padding-right: calc(50% - $widthContent/2);
+}
+
+.logo-img {
+    height: 50px;
+    width: 177px;
+}
+
+.title {
+    font-family: DM Serif Display;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 125%;
+    color: $darkText;
+}
+
+.header {
+    padding: 50px 0;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav {
+        display: flex;
+        gap: 40px;
+    }
+    &__nav a{
+        font-size: 20px;
+        color: $darkText;
+        transition: all 0.2s ease;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+.text {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 150%;
+    color: $lightText;
+}
+.banner {
+    position: relative;
+    min-height: 758px;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    &__content {
+        max-width: 435px;
+        margin-left: 52px;
+        &__title {
+            font-family: DM Serif Display;
+            font-size: 65px;
+            font-weight: 400;
+            line-height: 125%;
+            color: $darkText;
+            margin-bottom: 18px;
+        }
+        &__subtitle {
+            margin-bottom: 18px;
+        }
+    }
+    &__btn {
+        display: inline-block;
+        background-color: $darkText;
+        padding: 20px 48px;
+        border-radius: 15px;
+        font-family: Jost;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 125%;
+        transition: all 0.3s ease;
+        & a {
+            color: #fff;
+        }
+        & svg {
+            width: 15px;
+            height: 13px;
+        }
+        &:hover {
+            background-color: $lightText;
+        }
+    }
+    &__bg-img {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
+
+.project {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    &__heading {
+        text-align: center;
+        padding: 0 230px 90px;
+    }
+    &__title {
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 125%;
+        color: $darkText;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 547px);
+        gap: 55px 105px;
+    }
+    &__item {
+        width: 548px;
+        height: 619px;
+        & .radius-tl {
+            border-radius: 85px 0 0 0;
+        }
+        & .radius-tr {
+            border-radius: 0 85px 0 0;
+        }
+        & .radius-br {
+            border-radius: 0 0 85px 0;
+        }
+        & .radius-bl {
+            border-radius: 0 0 0 85px;
+        }
+        &__content {
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__link {
+                height: 70px;
+                width: 70px;
+                background-color: $backgroundColor;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                &:hover {
+                    background-color: $beigeText;
+                }
+            }
+        }
+    }
+}
+
+.counter {
+    background-color: $backgroundColor;
+    &__block {
+        padding: 150px 0;
+        display: flex;
+        &__item {
+            width: 300px;
+            text-align: center;
+            &:not(:last-child) {
+                border-right: $beigeText 1px solid;
+            }
+            & .count {
+                font-family: DM Serif Display;
+                font-size: 65px;
+                font-weight: 400;
+                line-height: 125%;
+                color: $beigeText;
+                &:hover {
+                    -webkit-text-stroke: 2px $darkText;
+                }
+            }
+        }
+    }
+}
+
+.blog {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    &__heading {
+        text-align: center;
+        padding: 0 195px 52px;
+    }
+    &__title {
+        font-family: DM Serif Display;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 125%;
+            color: $darkText;
+    }
+    &__flex {
+        display: flex;
+        gap: 30px;
+    }
+    &__item {
+        font-size: 0;
+        position: relative;
+        width: 380px;
+        height: 520px;
+        border: 2px solid $backgroundColor;
+        border-radius: 60px;
+        padding: 20px;
+        &__img {
+            border-radius: 50px 50px 0 0;
+        }
+        &__teg {
+            position: absolute;
+            top: 250px;
+            left: 40px;
+            width: 120px;
+            height: 40px;
+            padding: 8px;
+            background-color: #fff;
+            border-radius: 10px 10px 10px 0;
+            font-family: Jost;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+            color: $lightText;
+        }
+        &__content {
+            padding-top: 20px;
+            &__title {
+                padding-right: 52px;
+                margin-bottom: 30px;
+            }
+            &__date {
+                font-family: Jost;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 150%;
+                color: $lightText;
+            }
+        }
+        &__link {
+            position: absolute;
+            bottom: 27px;
+            right: 20px;
+            height: 52px;
+            width: 52px;
+            background-color:$backgroundColor;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            
+        }
+        &:hover {
+            background-color: $backgroundColor;
+            & .blog__item__link {
+                background-color: #fff;
+            }
+        }
+    }
+
+}
+
+.footer {
+    padding-bottom: 130px;
+    display: flex;
+    justify-content: space-between;
+    &__about {
+        max-width: 390px;
+        &__text {
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+        &__media a {
+            margin-right: 50px;
+        }
+    }
+    &__pages-nav {
+        width: 258px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__contact {
+        max-width: 258px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
