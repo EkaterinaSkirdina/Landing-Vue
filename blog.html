@@ -78,68 +78,17 @@
     <section class="articles container" id="blog">
       <h1 class="articles__heading heading">Articles & News</h1>
       <div class="blog__flex">
-        <div class="blog__item">
-          <img class="blog__item__img" src="img/blogCard1.jpg" alt="#" />
-          <div class="blog__item__teg">Kitchan Design</div>
+        <div v-for="item in items" :key="item.id<2" class="blog__item">
+          <img class="blog__item__img" :src="item.image" alt="#" />
+          <div class="blog__item__teg">{{item.tag}}</div>
           <div class="blog__item__content">
-            <h3 class="blog__item__content__title title">
-              Let’s Get Solution For Building Construction Work
-            </h3>
-            <p class="blog__item__content__date">26 December,2022</p>
-          </div>
-          <div class="blog__item__link">
-            <svg
-              width="10"
-              height="20"
-              viewBox="0 0 10 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <h3
+              style="white-space: pre-line"
+              class="blog__item__content__title title"
             >
-              <path
-                d="M1 19L9 10L1 1"
-                stroke="#292F36"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="blog__item">
-          <img class="blog__item__img" src="img/blogCard2.jpg" alt="#" />
-          <div class="blog__item__teg">Living Design</div>
-          <div class="blog__item__content">
-            <h3 class="blog__item__content__title title">
-              Low Cost Latest Invented Interior Designing Ideas.
+              {{item.title}}
             </h3>
-            <p class="blog__item__content__date">22 December,2022</p>
-          </div>
-          <div class="blog__item__link">
-            <svg
-              width="10"
-              height="20"
-              viewBox="0 0 10 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 19L9 10L1 1"
-                stroke="#292F36"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="blog__item">
-          <img class="blog__item__img" src="img/blogCard3.jpg" alt="#" />
-          <div class="blog__item__teg">Interior Design</div>
-          <div class="blog__item__content">
-            <h3 class="blog__item__content__title title">
-              Best For Any Office & Business Interior Solution
-            </h3>
-            <p class="blog__item__content__date">25 December,2022</p>
+            <p class="blog__item__content__date">{{item.date}}</p>
           </div>
           <div class="blog__item__link">
             <svg
@@ -238,5 +187,7 @@
         <p class="phone text">(123) 456 - 7890</p>
       </div>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
